@@ -25,7 +25,7 @@ int main(){
             int v=ver[i],w=ew[i];
             if(dis[v]>dis[u]+w){
                 dis[v]=dis[u]+w;
-                if(!inq[v]) q.push(v);
+                if(!inq[v]) q.push(v),inq[v]=1;
             }
         }
     }
