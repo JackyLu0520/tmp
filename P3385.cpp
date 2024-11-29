@@ -32,13 +32,14 @@ int main(){
     while(_--){
         scanf("%d%d",&n,&m);
         tot=1;
+        memset(head,0,sizeof(head));
         for(int i=1;i<=m;i++){
             int u,v,w;
             scanf("%d%d%d",&u,&v,&w);
             add(u,v,w);
             if(w>=0)    add(v,u,w);
         }
-        printf(spfa()?"YES":"NO");
+        printf(spfa()?"YES\n":"NO\n");
     }
     return 0;
 }
